@@ -6,19 +6,22 @@ typedef struct Lista
     struct Lista *ptr;
 } Lista;
 
+typedef struct Arvore{
+    int elem;
+    struct Arvore *esq, *dir;
+}Arvore;
+
 int fibonacci(int n); //ex1
 
 Lista *inicializa(void); //ex 5
 void imprime(Lista *l);  //ex 5
-//função 1
 Lista *insere_inicio(Lista *lista, int elemento); //ex 5
-//função 2
 Lista *insere_final(Lista *lista, int elemento); //ex 5
 
 int main()
 {
     //-----------------------Exercício 1--------------------------------
-    printf("fibonacci: %d \n", fibonacci(5));
+    //printf("fibonacci: %d \n", fibonacci(5));
 
     //-----------------------Exercício 5--------------------------------
     Lista *lista = inicializa(); //inicializa lista
@@ -89,3 +92,6 @@ void imprime(Lista *lista)
     for (aux = lista; aux != NULL; aux = aux->ptr)
         printf("info = %d\n", aux->elem);
 }
+
+
+
