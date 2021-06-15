@@ -8,7 +8,7 @@ unsigned int fib (unsigned int n);
 int main (){
     clock_t t;
     t = clock();
-    printf("fibo: %d",fib(55));
+    printf("fibo: %d",fibonacciB(1000000000));
     t=clock() - t;
 
     printf("Tempo de execucao: %lf", ((double)t)/((CLOCKS_PER_SEC/1000)));
