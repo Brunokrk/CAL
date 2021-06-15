@@ -18,7 +18,7 @@ Lista *insere_final(Lista *lista, int elemento); //ex 5
 int main()
 {
     //-----------------------Exercício 1--------------------------------
-    printf("fibonacci: %d \n",fibonacci(5));
+    printf("fibonacci: %d \n", fibonacci(5));
 
     //-----------------------Exercício 5--------------------------------
     Lista *lista = inicializa(); //inicializa lista
@@ -27,6 +27,7 @@ int main()
     lista = insere_inicio(lista, 2);
     lista = insere_inicio(lista, 1);
     lista = insere_final(lista, 5);
+    lista = insere_inicio(lista, 0);
     imprime(lista);
 }
 
@@ -54,6 +55,7 @@ int fibonacci(int n)
 
 Lista *inicializa(void)
 {
+    //função apenas para ajudar implementação, não necessária para o exercício
     return NULL;
 }
 
@@ -80,9 +82,10 @@ Lista *insere_final(Lista *lista, int elemento)
     return lista;
 }
 
-void imprime(Lista *l)
+void imprime(Lista *lista)
 {
-    Lista *p; /* variável auxiliar para percorrer a lista */
-    for (p = l; p != NULL; p = p->ptr)
-        printf("info = %d\n", p->elem);
+    //função apenas para ajudar implementação, não necessária para o exercício
+    Lista *aux; 
+    for (aux = lista; aux != NULL; aux = aux->ptr)
+        printf("info = %d\n", aux->elem);
 }
